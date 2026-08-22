@@ -73,7 +73,7 @@ st.markdown(
 # API CONFIG
 # ---------------------------------------------------------
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://fraud-detection-model.fastapicloud.dev/predict"
 
 
 # ---------------------------------------------------------
