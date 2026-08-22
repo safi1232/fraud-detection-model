@@ -11,6 +11,8 @@ This project develops a machine learning model that analyzes transaction-related
 - `0` → Not Fraud
 - `1` → Fraud
 
+App url is https://fraud-detection-model-fcoy9emisf6hdymxqjydlw.streamlit.app/
+
 The project covers the complete Machine Learning workflow, from data preprocessing and exploratory analysis to model training, evaluation, and prediction.
 
 ## 🚀 Features
@@ -69,3 +71,4 @@ Best Model Selection
 Model Serialization
    ↓
 Prediction / API Deployment
+App url is https://fraud-detection-model-fcoy9emisf6hdymxqjydlw.streamlit.app/
