@@ -1,74 +1,134 @@
 # Fraud Detection Model
 
-An end-to-end Machine Learning project for detecting potentially fraudulent transactions using Python and Scikit-learn.
+An end-to-end machine learning project for detecting potentially fraudulent transactions using Python and Scikit-learn.
 
-## 📌 Project Overview
+## Overview
 
-Fraud detection is an important Machine Learning application used in financial and e-commerce systems to identify suspicious transactions.
+This project implements a machine learning pipeline to classify financial transactions as fraudulent or legitimate. It demonstrates the practical application of data preprocessing, exploratory data analysis, feature engineering, model development, evaluation, and deployment.
 
-This project develops a machine learning model that analyzes transaction-related features and predicts whether a transaction is:
+The trained model generates binary predictions:
 
-- `0` → Not Fraud
-- `1` → Fraud
+- `0` — Legitimate Transaction
+- `1` — Fraudulent Transaction
 
-App url is https://fraud-detection-model-fcoy9emisf6hdymxqjydlw.streamlit.app/
+## Live Application
 
-The project covers the complete Machine Learning workflow, from data preprocessing and exploratory analysis to model training, evaluation, and prediction.
+**[Launch the Fraud Detection App](https://fraud-detection-model-fcoy9emisf6hdymxqjydlw.streamlit.app/)**
 
-## 🚀 Features
+## Key Features
 
-- Data loading and preprocessing
+- Data preprocessing and cleaning
 - Missing-value handling
-- Categorical feature encoding
-- Numerical feature preprocessing
-- Feature scaling
-- Exploratory Data Analysis
-- Outlier handling
-- Machine Learning model training
-- Model evaluation
-- Prediction of fraudulent transactions
-- ML pipeline implementation
-- Model serialization for deployment
+- Exploratory data analysis (EDA)
+- Categorical encoding and numerical feature scaling
+- Outlier handling and feature engineering
+- Machine learning model training and evaluation
+- Scikit-learn preprocessing and prediction pipeline
+- Model serialization using Pickle
+- Interactive fraud prediction interface
+- API development using FastAPI and Pydantic
 
-## 🛠️ Technologies Used
+## Technology Stack
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- FastAPI
-- Pydantic
-- Uvicorn
-- Pickle
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Pandas | Data manipulation and preprocessing |
+| NumPy | Numerical computations |
+| Scikit-learn | Model training, preprocessing, and evaluation |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| FastAPI | API development |
+| Pydantic | Request validation |
+| Uvicorn | ASGI server |
+| Pickle | Model serialization |
+| Streamlit | Interactive web application |
 
-## 🔄 Machine Learning Workflow
+## Machine Learning Pipeline
 
 ```text
-Dataset
-   ↓
+Raw Dataset
+    ↓
 Data Cleaning
-   ↓
+    ↓
 Exploratory Data Analysis
-   ↓
-Missing Value Handling
-   ↓
+    ↓
+Missing-Value Handling
+    ↓
 Categorical Encoding
-   ↓
+    ↓
 Feature Scaling
-   ↓
-Feature Selection / Engineering
-   ↓
+    ↓
+Feature Engineering
+    ↓
 Train-Test Split
-   ↓
+    ↓
 Model Training
-   ↓
+    ↓
 Model Evaluation
-   ↓
-Best Model Selection
-   ↓
+    ↓
 Model Serialization
-   ↓
-Prediction / API Deployment
-App url is https://fraud-detection-model-fcoy9emisf6hdymxqjydlw.streamlit.app/
+    ↓
+Deployment & Prediction
+```
+
+## Project Objectives
+
+- Develop a machine learning solution for transaction fraud classification.
+- Apply data preprocessing and feature engineering techniques.
+- Build a consistent pipeline for transforming data and generating predictions.
+- Evaluate model performance using relevant classification metrics.
+- Deploy the trained model through an interactive web application.
+
+## Repository Structure
+
+```text
+fraud-detection-model/
+├── model/
+│   └── pipe.pkl
+├── app.py
+├── helper.py
+├── requirements.txt
+├── README.md
+└── frontend/
+    └── fraudguard-frontend/
+```
+
+*The repository structure above is illustrative; filenames and directories may vary depending on the current project version.*
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/safi1232/fraud-detection-model.git
+cd fraud-detection-model
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Application
+
+For a Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+For a FastAPI backend, if configured as the project's entry point:
+
+```bash
+uvicorn app:app --reload
+```
+
+Use the command corresponding to the application you want to run.
+
+## Author
+
+**Safi**
+
+GitHub: [@safi1232](https://github.com/safi1232)
