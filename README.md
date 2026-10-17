@@ -13,7 +13,7 @@ The trained model generates binary predictions:
 
 ## Live Application
 
-**[Launch the Fraud Detection App](https://fraud-detection-model-fcoy9emisf6hdymxqjydlw.streamlit.app/)**
+https://fraud-3lp.pages.dev/
 
 ## Key Features
 
