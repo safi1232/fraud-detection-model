@@ -2,12 +2,23 @@ from fastapi import FastAPI
 from model.predict import predict_output, model, MODEL_VERSION
 from schemas.prediction_response import PredictionResponse
 from schemas.user_input import UserInput
-
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Fraud Detection API",
     description="API for detecting fraudulent transactions using a machine learning model",
     version=MODEL_VERSION
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:4173"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

@@ -1,0 +1,267 @@
+
+.prediction-form-card {
+  background: #fff;
+  border: 1px solid #e5eaf0;
+  border-radius: 18px;
+  padding: 28px;
+  color: #172033;
+  box-shadow: 0 8px 30px rgba(20, 35, 60, 0.04);
+}
+
+.prediction-heading,
+.prediction-section-heading,
+.result-title,
+.result-confidence,
+.probability-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.prediction-heading {
+  margin-bottom: 30px;
+}
+
+.prediction-eyebrow,
+.result-title span {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+}
+
+.prediction-heading h2 {
+  margin: 7px 0;
+  font-size: 25px;
+  letter-spacing: -0.7px;
+}
+
+.prediction-heading p,
+.prediction-section-heading p {
+  color: #718096;
+  font-size: 13px;
+  margin: 5px 0 0;
+}
+
+.prediction-heading-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: #167b65;
+  background: #e8f7f1;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.prediction-section {
+  border-top: 1px solid #edf0f4;
+  padding: 24px 0;
+}
+
+.prediction-section-heading {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 18px;
+}
+
+.prediction-section-heading h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.prediction-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.prediction-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.prediction-field > span {
+  font-size: 12px;
+  color: #48566b;
+  font-weight: 650;
+}
+
+.prediction-field input,
+.prediction-field select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #dce3eb;
+  background: #fbfcfe;
+  color: #172033;
+  border-radius: 9px;
+  padding: 11px 12px;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.prediction-field input:focus,
+.prediction-field select:focus {
+  border-color: #21866e;
+  box-shadow: 0 0 0 3px rgba(33, 134, 110, 0.12);
+}
+
+.prediction-field input::placeholder {
+  color: #9aa5b5;
+}
+
+.prediction-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  background: #116b58;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.prediction-submit:hover:not(:disabled) {
+  background: #0c5848;
+  transform: translateY(-1px);
+}
+
+.prediction-submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.spin {
+  animation: prediction-spin 1s linear infinite;
+}
+
+@keyframes prediction-spin {
+  to { transform: rotate(360deg); }
+}
+
+.prediction-error,
+.prediction-result {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.prediction-error {
+  display: flex;
+  gap: 12px;
+  color: #a52b2b;
+  background: #fff1f0;
+  border: 1px solid #ffd9d5;
+}
+
+.prediction-error p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.prediction-result {
+  border: 1px solid #dce7e3;
+  background: #f9fcfb;
+}
+
+.fraud-result {
+  border-color: #fecaca;
+  background: #fff8f7;
+}
+
+.safe-result .result-title {
+  color: #167b65;
+}
+
+.fraud-result .result-title {
+  color: #c0392b;
+}
+
+.result-title {
+  justify-content: flex-start;
+}
+
+.result-title h3 {
+  margin: 5px 0 0;
+  font-size: 19px;
+}
+
+.result-confidence {
+  margin: 22px 0;
+  padding: 14px 0;
+  border-top: 1px solid #e5eaf0;
+  border-bottom: 1px solid #e5eaf0;
+  color: #526176;
+  font-size: 13px;
+}
+
+.result-confidence strong {
+  font-size: 21px;
+  color: #172033;
+}
+
+.probability-row {
+  margin: 16px 0 8px;
+  color: #526176;
+  font-size: 12px;
+}
+
+.probability-row strong {
+  color: #172033;
+}
+
+.probability-track {
+  height: 7px;
+  border-radius: 99px;
+  overflow: hidden;
+  background: #e7edf1;
+}
+
+.probability-fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.4s ease;
+}
+
+.legitimate-fill {
+  background: #16856b;
+}
+
+.fraud-fill {
+  background: #dc5757;
+}
+
+.result-disclaimer {
+  color: #718096;
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 20px 0 0;
+}
+
+@media (max-width: 640px) {
+  .prediction-form-card {
+    padding: 18px;
+  }
+
+  .prediction-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prediction-heading h2 {
+    font-size: 21px;
+  }
+}
