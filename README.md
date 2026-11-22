@@ -13,9 +13,8 @@ The trained model generates binary predictions:
 
 ## Live Application
 
-https://fraud-3lp.pages.dev/
-# Alternate URL
-https://fraud-detection-4xbuci1ma-acme-4a68.vercel.app/ 
+https://fraud-detection-plum-three.vercel.app
+
 
 ## Key Features
 
